@@ -365,7 +365,6 @@ class FoxyClient
             $response = $e->getResponse();
             $error = array_merge($error, array(
                 "error_code" => $response->getStatusCode(),
-                "response" => (string)$response,
                 "error_contents" => (string) $response->getBody()->getContents()
             ));
         }
